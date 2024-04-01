@@ -18,27 +18,17 @@ public class Main {
 
         st = new StringTokenizer(br.readLine());
 
-        for(int i = 0; i < 8; i ++) {
+        for (int i = 0; i < 8; i++) {
             a[i] = parse(st.nextToken());
         }
 
-        for(int i = 0; i < 7; i++) {
-            if(flag.equals("")) {
-                if(a[i] == a[i+1] - 1) {
-                    flag = "ascending";
-                    continue;
-                } else if (a[i] == a[i + 1] + 1) {
-                    flag = "descending";
-                    continue;
-                }
-            } else if(flag.equals("ascending")) {
-                if(a[i] == a[i+1] - 1) {
-                    continue;
-                }
-            } else if (flag.equals("descending")) {
-                if(a[i] == a[i+1] + 1) {
-                    continue;
-                }
+        for (int i = 0; i < 7; i++) {
+            if (a[i] == a[i + 1] - 1) {
+                flag = "ascending";
+                continue;
+            } else if (a[i] == a[i + 1] + 1) {
+                flag = "descending";
+                continue;
             }
 
             flag = "mixed";
