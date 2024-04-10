@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigInteger;
 
 public class Main {
 
@@ -15,12 +16,12 @@ public class Main {
 
         String s = br.readLine();
 
-        int hash = 0;
+        BigInteger hash = new BigInteger("0");
 
         for(int i = 0; i < a; i++) {
-            hash += ((s.charAt(i)-96) * (int) Math.pow(31,i));
+            hash = hash.add(BigInteger.valueOf(s.charAt(i) - 96).multiply(BigInteger.valueOf(31).pow(i)));
         }
 
-        System.out.println(hash);
+        System.out.println(hash.remainder(BigInteger.valueOf(1234567891)));
     }
 }
