@@ -19,7 +19,7 @@ public class Main {
             count[parse(br.readLine())]++;
         }
 
-        for(int i = 1; i < 10001; i++) {
+        for(int i = 1; i < count.length; i++) {
             while(count[i] > 0) {
                 sb.append(i).append("\n");
                 count[i]--;
