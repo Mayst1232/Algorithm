@@ -10,14 +10,9 @@ class Solution {
         int j = 1;
 
         while (j < phone_book.length) {
-
-            int length = phone_book[i].length();
-
-            if(phone_book[j].length() > length) {
-                if (phone_book[j].substring(0, length).equals(phone_book[i])) {
-                    answer = false;
-                    break;
-                }
+            if (phone_book[j].contains(phone_book[i])) {
+                answer = false;
+                break;
             }
 
             i++;
