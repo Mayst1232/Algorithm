@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigInteger;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -11,9 +12,9 @@ public class Main {
 
         st = new StringTokenizer(br.readLine());
 
-        int a = Integer.parseInt(st.nextToken());
-        int b = Integer.parseInt(st.nextToken());
+        BigInteger a = new BigInteger(st.nextToken());
+        BigInteger b = new BigInteger(st.nextToken());
 
-        System.out.println((a + b) * (a - b));
+        System.out.println((a.add(b)).multiply(a.subtract(b)));
     }
 }
