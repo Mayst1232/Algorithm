@@ -18,5 +18,15 @@ public class Main {
         }
 
         System.out.println(sum);
+        
+        /* 
+        String sNum = br.readLine();
+        char[] cNum = sNum.toCharArray();
+        int sum = 0;
+        
+        for(int i = 0; i < cNum.length; i++) {
+            sum += cNum[i] - '0';
+        }
+         */
     }
 }
